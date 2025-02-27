@@ -52,7 +52,7 @@ const config: Config = {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-
+				text: 'var(--text)',
 				blue: '#0099FF',
 			},
 			keyframes: {

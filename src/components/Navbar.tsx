@@ -21,11 +21,11 @@ export default function Navbar() {
 			label: 'Products',
 		},
 		{
-			href: '/blog',
-			label: 'Blog',
+			href: '/blogs',
+			label: 'Blogs',
 		},
 		{
-			href: '/contact',
+			href: '#contact',
 			label: 'Contact',
 		},
 	];

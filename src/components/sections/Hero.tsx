@@ -120,10 +120,10 @@ export default function Hero() {
 					{/* next */}
 					<button
 						onClick={nextSlide}
-						className='absolute -right-14 t-4 top-1/3 mt-10 - -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors'
+						className='absolute -right-14 t-4 top-1/3 mt-10 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors'
 					>
 						<svg
-							className='w-6 h-6'
+							className='w-8 h-8 text-blue'
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'
@@ -144,7 +144,7 @@ export default function Hero() {
 							<button
 								key={index}
 								className={`w-2 h-2 rounded-full transition-all duration-300 ${
-									currentSlide === index ? 'bg-[#0099FF] w-4' : 'bg-gray-300'
+									currentSlide === index ? 'bg-blue w-4' : 'bg-gray-300'
 								}`}
 								onClick={() => setCurrentSlide(index)}
 							/>
