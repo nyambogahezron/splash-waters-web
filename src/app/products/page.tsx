@@ -1,9 +1,7 @@
 'use client';
 
+import ProductCard from '@/components/ProductCard';
 import { motion } from 'framer-motion';
-import { Button } from '../ui/button';
-import Link from 'next/link';
-import ProductCard from '../ProductCard';
 
 const products = [
 	{
@@ -64,15 +62,6 @@ export default function Products() {
 					{products.map((product, index) => (
 						<ProductCard key={index} product={product} />
 					))}
-				</div>
-
-				{/* view all btn */}
-				<div className='w-full flex items-center justify-center mx-auto'>
-					<Link href={'/products'}>
-						<Button className='px-14 bg-transparent  capitalize font-bold text-text py-4 h-14 border border-blue my-20 transition-all hover:text-base hover:bg-blue hover:border-white'>
-							View All Products
-						</Button>
-					</Link>
 				</div>
 			</div>
 		</section>

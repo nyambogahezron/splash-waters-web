@@ -1,0 +1,222 @@
+{
+	"categories": [
+		{
+			"name": "Bottled Water",
+			"products": [
+				{
+					"id": 1,
+					"name": "AquaPure 500ml Bottle",
+					"description": "Premium purified water in a convenient 500ml bottle.",
+					"price": 0.5,
+					"stock": 1000,
+					"quantity": "500 ml",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 2,
+					"name": "AquaPure 1L Bottle",
+					"description": "Fresh and pure water in a 1-liter bottle.",
+					"price": 1.0,
+					"stock": 800,
+					"quantity": "1 liter",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 3,
+					"name": "AquaPure 5L Bottle",
+					"description": "Large-sized bottled water ideal for home use.",
+					"price": 3.5,
+					"stock": 500,
+					"quantity": "5 liters",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 4,
+					"name": "AquaPure 10L Bottle",
+					"description": "10-liter bottled water for extended use.",
+					"price": 5.5,
+					"stock": 400,
+					"quantity": "10 liters",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 5,
+					"name": "AquaPure 20L Refillable",
+					"description": "20-liter reusable and refillable water bottle.",
+					"price": 8.0,
+					"stock": 300,
+					"quantity": "20 liters",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 6,
+					"name": "Sparkling Water 500ml",
+					"description": "Crisp and refreshing sparkling water.",
+					"price": 1.2,
+					"stock": 700,
+					"quantity": "500 ml",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 7,
+					"name": "Alkaline Water 1L",
+					"description": "High pH alkaline water for better hydration.",
+					"price": 2.5,
+					"stock": 600,
+					"quantity": "1 liter",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 8,
+					"name": "Electrolyte-Infused Water 750ml",
+					"description": "Hydration-enhancing electrolyte water.",
+					"price": 2.0,
+					"stock": 500,
+					"quantity": "750 ml",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 9,
+					"name": "Mineral Water 1.5L",
+					"description": "Naturally sourced mineral-rich water.",
+					"price": 1.8,
+					"stock": 550,
+					"quantity": "1.5 liter",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 10,
+					"name": "Flavored Water - Lemon 500ml",
+					"description": "Refreshing lemon-infused flavored water.",
+					"price": 1.5,
+					"stock": 450,
+					"quantity": "500 ml",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 11,
+					"name": "Flavored Water - Berry 500ml",
+					"description": "Berry-flavored hydrating water drink.",
+					"price": 1.5,
+					"stock": 400,
+					"quantity": "500 ml",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				},
+				{
+					"id": 12,
+					"name": "Coconut Water 1L",
+					"description": "Natural coconut water for instant refreshment.",
+					"price": 3.0,
+					"stock": 300,
+					"quantity": "1 liter",
+					"image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXF1YVB1cmUlMjA1MDBtbCUyMEJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D"
+				}
+			]
+		},
+		{
+			"name": "Water Dispensers",
+			"products": [
+				{
+					"id": 14,
+					"name": "Hot & Cold Water Dispenser",
+					"description": "Dual-function dispenser with hot and cold water options.",
+					"price": 120.0,
+					"stock": 50,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?water,dispenser"
+				},
+				{
+					"id": 15,
+					"name": "Countertop Water Dispenser",
+					"description": "Compact and stylish dispenser for easy water access.",
+					"price": 75.0,
+					"stock": 60,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?water,filter"
+				},
+				{
+					"id": 16,
+					"name": "Bottom Load Water Dispenser",
+					"description": "Modern bottom-load dispenser for effortless refilling.",
+					"price": 140.0,
+					"stock": 40,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?modern,dispenser"
+				}
+			]
+		},
+		{
+			"name": "Water Filters & Purifiers",
+			"products": [
+				{
+					"id": 17,
+					"name": "Activated Carbon Filter",
+					"description": "Reduces chlorine, taste, and odor from water.",
+					"price": 25.0,
+					"stock": 200,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?water,filter"
+				},
+				{
+					"id": 18,
+					"name": "Reverse Osmosis System",
+					"description": "Advanced purification system for clean drinking water.",
+					"price": 220.0,
+					"stock": 30,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?osmosis,filter"
+				},
+				{
+					"id": 19,
+					"name": "UV Water Purifier",
+					"description": "Kills bacteria and viruses using ultraviolet technology.",
+					"price": 180.0,
+					"stock": 25,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?uv,purifier"
+				}
+			]
+		},
+		{
+			"name": "Accessories",
+			"products": [
+				{
+					"id": 20,
+					"name": "Reusable Water Bottle 1L",
+					"description": "Eco-friendly and BPA-free reusable water bottle.",
+					"price": 10.0,
+					"stock": 300,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?reusable,bottle"
+				},
+				{
+					"id": 21,
+					"name": "Water Pump Dispenser",
+					"description": "Manual water pump for easy dispensing from large bottles.",
+					"price": 12.0,
+					"stock": 150,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?water,pump"
+				},
+				{
+					"id": 22,
+					"name": "Silicone Spout Cap",
+					"description": "Leak-proof cap for water bottles and jugs.",
+					"price": 3.0,
+					"stock": 500,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?silicone,cap"
+				},
+				{
+					"id": 23,
+					"name": "Water Dispenser Stand",
+					"description": "Adjustable metal stand for holding water jugs.",
+					"price": 30.0,
+					"stock": 70,
+					"quantity": 1,
+					"image": "https://source.unsplash.com/500x500/?water,stand"
+				}
+			]
+		}
+	]
+}
