@@ -7,6 +7,7 @@ import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
 	const [isNavbarOffView, setIsNavbarOffView] = React.useState(false);
+	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 	const links = [
 		{
 			href: '/',
@@ -79,19 +80,99 @@ export default function Navbar() {
 					</div>
 
 					<div className='flex items-center space-x-4'>
-						<button className='relative'>
-							<ShoppingCart className='h-6 w-6 text-accent-foreground' />
-							<span className='absolute -top-2 -right-2 bg-[#0099FF] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>
-								0
-							</span>
-						</button>
+						<Link href='/cart' className='relative'>
+							<button className='relative'>
+								<ShoppingCart className='h-6 w-6 text-accent-foreground' />
+								<span className='absolute -top-2 -right-2 bg-[#0099FF] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>
+									0
+								</span>
+							</button>
+						</Link>
 						<div className='text-accent-DEFAULT'>
 							Total <span className='font-semibold'>$0.00</span>
 						</div>
 
 						<ThemeToggle />
+
+						{/* Mobile menu button */}
+						<button
+							className='md:hidden flex items-center'
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+						>
+							<svg
+								className='w-6 h-6'
+								fill='none'
+								stroke='currentColor'
+								viewBox='0 0 24 24'
+							>
+								{isMenuOpen ? (
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth={2}
+										d='M6 18L18 6M6 6l12 12'
+									/>
+								) : (
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										strokeWidth={2}
+										d='M4 6h16M4 12h16M4 18h16'
+									/>
+								)}
+							</svg>
+						</button>
 					</div>
 				</div>
+				{/* Mobile menu */}
+				{isMenuOpen && (
+					<div className='md:hidden py-4 border-t'>
+						<div className='flex flex-col space-y-4'>
+							<Link
+								href='/'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Home
+							</Link>
+							<Link
+								href='/about'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								About
+							</Link>
+							<Link
+								href='/products'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Products
+							</Link>
+							<Link
+								href='/gallery'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Gallery
+							</Link>
+							<Link
+								href='/blog'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Blog
+							</Link>
+							<Link
+								href='/contact'
+								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Contact
+							</Link>
+						</div>
+					</div>
+				)}
 			</div>
 		</motion.nav>
 	);
