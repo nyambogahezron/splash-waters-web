@@ -55,7 +55,6 @@ export default function Checkout() {
 		<main className='min-h-screen pt-24 bg-background'>
 			{/* Hero Section */}
 			<section className='relative py-12 bg-[#F5F9FF]'>
-				<div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -68,17 +67,6 @@ export default function Checkout() {
 							Complete your purchase securely
 						</p>
 					</motion.div>
-				</div>
-
-				{/* Wave decoration */}
-				<div className='absolute bottom-0 left-0 right-0'>
-					<svg viewBox='0 0 1440 100' className='w-full'>
-						<path
-							fill='white'
-							fillOpacity='1'
-							d='M0,32L48,37.3C96,43,192,53,288,80C384,107,480,149,576,154.7C672,160,768,128,864,112C960,96,1056,96,1152,101.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-						></path>
-					</svg>
 				</div>
 			</section>
 
@@ -488,7 +476,7 @@ export default function Checkout() {
 								<div className='mt-4 flex items-start space-x-2'>
 									<Check className='h-5 w-5 text-[#0099FF] mt-0.5' />
 									<p className='text-sm text-muted-foreground'>
-										30-day satisfaction guarantee. If you&apos;re not completely
+										30-day satisfaction guarantee. If youre not completely
 										satisfied, return for a full refund.
 									</p>
 								</div>

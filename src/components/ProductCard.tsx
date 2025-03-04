@@ -1,45 +1,57 @@
-import Image from 'next/image';
-import React from 'react';
-import { Button } from './ui/button';
+'use client';
+
+import { motion } from 'framer-motion';
 import { ShoppingCart } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Product } from '@/lib/types';
+import { useGlobalContext } from '@/context/GlobalContext';
 
-type Product = {
-	name: string;
-	image: string;
-	price: string;
-	description: string;
-};
+interface ProductCardProps {
+	product: Product;
+}
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: ProductCardProps) {
+	const { addToCart } = useGlobalContext();
+
 	return (
-		<div
-			key={product.name}
-			className='bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-[450px] flex flex-col border'
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true }}
+			className='bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow'
 		>
-			<div className='relative h-[300px]'>
+			<div className='relative h-48'>
 				<Image
 					src={product.image}
 					alt={product.name}
 					fill
-					className='object-cover transition-all hover:scale-105'
+					className='object-cover'
 				/>
+				{product.category && (
+					<div className='absolute top-4 right-4 bg-[#0099FF] text-white px-3 py-1 rounded-full text-sm'>
+						{product.category}
+					</div>
+				)}
 			</div>
-			<div className='px-4 py-5'>
-				<h4 className='text-lg font-semibold text-foreground mb-2'>
+			<div className='p-6'>
+				<h4 className='text-xl font-semibold text-foreground mb-2'>
 					{product.name}
 				</h4>
-				<p className='text-muted-foreground mb-3 text-sm'>
-					{product.description.length > 100
-						? product.description.slice(0, 100) + '...'
-						: product.description}
-				</p>
+				<p className='text-muted-foreground mb-4'>{product.description}</p>
 				<div className='flex items-center justify-between'>
-					<span className='text-2xl font-bold text-blue'>{product.price}</span>
-					<Button variant='outline' className=' hover:text-blue'>
-						<ShoppingCart size={24} />
+					<span className='text-2xl font-bold text-[#0099FF]'>
+						${product.price}
+					</span>
+					<Button
+						onClick={() => addToCart(product)}
+						className='bg-[#0099FF] hover:bg-blue-600 text-white flex items-center space-x-2'
+					>
+						<ShoppingCart className='h-4 w-4' />
+						<span>Add to Cart</span>
 					</Button>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

@@ -10,21 +10,21 @@ const products = [
 		name: 'Premium Water Purifier',
 		image:
 			'https://plus.unsplash.com/premium_photo-1705969351341-f34f843d7a32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdhdGVyJTIwYm90dGxlfGVufDB8fDB8fHww',
-		price: '$599',
+		price: 599,
 		description: 'Advanced 7-stage filtration system',
 	},
 	{
 		name: 'UV Water Sterilizer',
 		image:
 			'https://plus.unsplash.com/premium_photo-1705969351341-f34f843d7a32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdhdGVyJTIwYm90dGxlfGVufDB8fDB8fHww',
-		price: '$299',
+		price: 299,
 		description: '99.99% bacteria elimination',
 	},
 	{
 		name: 'Smart Water Softener',
 		image:
 			'https://plus.unsplash.com/premium_photo-1705969351341-f34f843d7a32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdhdGVyJTIwYm90dGxlfGVufDB8fDB8fHww',
-		price: '$499',
+		price: 499,
 		description: 'IoT-enabled water softening',
 	},
 ];

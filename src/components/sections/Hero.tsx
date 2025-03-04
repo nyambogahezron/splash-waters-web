@@ -63,9 +63,9 @@ export default function Hero() {
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.8, delay: 0.3 }}
-								className='md:space-y-6 pl-8 py-2 absolute bottom-1/2 left-96 max-w-[800px] z-10'
+								className='md:space-y-6 pl-8 py-2 absolute bottom-[35%] md:bottom-1/2 left-0 md:left-96 max-w-[800px] z-10'
 							>
-								<h1 className='text-5xl md:text-6xl font-bold text-text mb-6'>
+								<h1 className='text-3xl md:text-6xl font-bold text-text mb-6'>
 									{heroSlides[currentSlide].title}
 								</h1>
 								<p className='text-lg text-white mb-14'>
@@ -98,10 +98,10 @@ export default function Hero() {
 					{/* prev */}
 					<button
 						onClick={prevSlide}
-						className='absolute left-14 top-1/2 -mt-14 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors '
+						className='absolute left-[73%] md:left-14 top-[95%] md:top-1/2  md:-mt-14 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors '
 					>
 						<svg
-							className='w-8 h-8 text-blue'
+							className='w-5 h-5 md:w-8 md:h-8 text-blue'
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'
@@ -118,10 +118,10 @@ export default function Hero() {
 					{/* next */}
 					<button
 						onClick={nextSlide}
-						className='absolute right-14 top-1/2 -mt-14 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors '
+						className='absolute right-4 md:right-14 top-[95%] md:top-1/2 md:-mt-14 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-50 transition-colors '
 					>
 						<svg
-							className='w-8 h-8 text-blue'
+							className='w-5 h-5 md:w-8 md:h-8 text-blue'
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'

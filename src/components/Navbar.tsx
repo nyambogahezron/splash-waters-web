@@ -4,6 +4,9 @@ import { Droplets, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
+import { useGlobalContext } from '@/context/GlobalContext';
+
+const SCREEN = window.innerWidth;
 
 export default function Navbar() {
 	const [isNavbarOffView, setIsNavbarOffView] = React.useState(false);
@@ -31,8 +34,23 @@ export default function Navbar() {
 		},
 	];
 
+	const { items, total } = useGlobalContext();
+
+	const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
+
+	//set isNavbarOffView to true always on mobile
+	React.useEffect(() => {
+		if (window.innerWidth < 768) {
+			setIsNavbarOffView(true);
+		}
+	}, []);
+
 	const onScroll = React.useCallback(() => {
 		const { scrollY } = window;
+		if (SCREEN < 768) {
+			setIsNavbarOffView(true);
+			return;
+		}
 		setIsNavbarOffView(scrollY > 35);
 	}, []);
 
@@ -56,13 +74,13 @@ export default function Navbar() {
 				zIndex: 50,
 			}}
 			transition={{ duration: 0.3, ease: 'easeInOut' }}
-			className='fixed top-0 mx-auto left-0 right-0 z-50 bg-background shadow-sm'
+			className='fixed top-0 mx-auto left-0 right-0 z-50 bg-background shadow-sm md:fixed md:w-full'
 		>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center'>
 				<div className='flex justify-between items-center h-20'>
 					<Link href='/' className='flex items-center space-x-2'>
 						<Droplets className='h-8 w-8 text-blue' />
-						<span className='text-xl font-bold text-gray-900 dark:text-white'>
+						<span className='text-xl font-bold text-gray-900 dark:text-white hidden md:block'>
 							Water Splash
 						</span>
 					</Link>
@@ -79,17 +97,17 @@ export default function Navbar() {
 						))}
 					</div>
 
-					<div className='flex items-center space-x-4'>
-						<Link href='/cart' className='relative'>
+					<div className='flex items-center space-x-4 justify-center'>
+						<Link href='/cart' className='relative mt-2'>
 							<button className='relative'>
 								<ShoppingCart className='h-6 w-6 text-accent-foreground' />
 								<span className='absolute -top-2 -right-2 bg-[#0099FF] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>
-									0
+									{itemCount}
 								</span>
 							</button>
 						</Link>
-						<div className='text-accent-DEFAULT'>
-							Total <span className='font-semibold'>$0.00</span>
+						<div className='text-accent-DEFAULT hidden md:block'>
+							Total <span className='font-semibold'>${total.toFixed(2)}</span>{' '}
 						</div>
 
 						<ThemeToggle />
@@ -128,48 +146,15 @@ export default function Navbar() {
 				{isMenuOpen && (
 					<div className='md:hidden py-4 border-t'>
 						<div className='flex flex-col space-y-4'>
-							<Link
-								href='/'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Home
-							</Link>
-							<Link
-								href='/about'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								About
-							</Link>
-							<Link
-								href='/products'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Products
-							</Link>
-							<Link
-								href='/gallery'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Gallery
-							</Link>
-							<Link
-								href='/blog'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Blog
-							</Link>
-							<Link
-								href='/contact'
-								className='text-gray-700 hover:text-[#0099FF] transition-colors px-4 py-2'
-								onClick={() => setIsMenuOpen(false)}
-							>
-								Contact
-							</Link>
+							{links.map((link) => (
+								<Link
+									key={link.href}
+									href={link.href}
+									className='text-gray-700 hover:text-blue dark:text-white dark:hover:text-white mb-2'
+								>
+									{link.label}
+								</Link>
+							))}
 						</div>
 					</div>
 				)}
