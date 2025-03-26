@@ -1,6 +1,5 @@
 import ProductCard from '@/components/ProductCard';
 import HomeLayout from '@/layouts/app/home-layout';
-import { motion } from 'framer-motion';
 
 const products = [
     {
@@ -33,28 +32,7 @@ export default function Products() {
                 {/* background blur */}
                 <div className="bg-blue/5 absolute -right-6 -bottom-6 z-0 h-full w-full rounded-full opacity-55 blur-3xl"></div>
 
-                <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-16 text-center">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-blue text-2xl font-semibold uppercase"
-                        >
-                            Our Products
-                        </motion.h2>
-                        <motion.h3
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="text-foreground mt-2 text-4xl font-bold"
-                        >
-                            Featured Water <br />
-                            <span className="ml-1 font-extrabold text-orange-600">Purification Systems</span> <strong>&</strong>
-                            <span className="ml-2 font-extrabold text-orange-600">Drinks</span>
-                        </motion.h3>
-                    </div>
+                <div className="relative z-10 mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                         {products.map((product, index) => (
                             <ProductCard key={index} product={product} />

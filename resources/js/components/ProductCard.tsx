@@ -16,10 +16,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl"
+            className="bg-card h-full overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl"
         >
-            <div className="relative h-48">
-                <img src={product.image} alt={product.name} loading="lazy" className="object-cover" />
+            <div className="relative h-[450px]">
+                <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
                 {product.category && (
                     <div className="absolute top-4 right-4 rounded-full bg-[#0099FF] px-3 py-1 text-sm text-white">{product.category}</div>
                 )}

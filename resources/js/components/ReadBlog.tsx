@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Facebook, Linkedin, Twitter } from 'lucide-react';
-import Image from 'next/image';
 
 type props = {
     post: {
@@ -23,7 +22,7 @@ export default function ReadBlog({ post }: props) {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="overflow-hidden rounded-lg bg-white shadow-xl">
                 <div className="relative h-[400px]">
-                    <Image src={post.image} alt={post.title} fill className="object-cover" />
+                    <img src={post.image} alt={post.title} className="object-cover" />
                     <div className="absolute top-4 right-4 rounded-full bg-[#0099FF] px-3 py-1 text-white">{post.category}</div>
                 </div>
 
@@ -42,7 +41,7 @@ export default function ReadBlog({ post }: props) {
                     <h1 className="text-foreground mb-6 text-4xl font-bold">{post.title}</h1>
 
                     <div className="mb-8 flex items-center space-x-4">
-                        <Image src={post.authorImage} alt={post.author} width={48} height={48} className="rounded-full" />
+                        <img src={post.authorImage} alt={post.author} width={48} height={48} className="rounded-full" />
                         <div>
                             <div className="font-semibold">{post.author}</div>
                             <div className="text-muted-foreground text-sm">Water Quality Expert</div>

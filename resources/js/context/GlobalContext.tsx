@@ -24,6 +24,7 @@ export const useGlobalContext = () => useContext(GlobalContext);
 
 export function GlobalContextProvider({ children }: { children: React.ReactNode }) {
     const [items, setItems] = useState<CartItem[]>([]);
+    console.log('GlobalContextProvider', items);
 
     useEffect(() => {
         // Load cart from localStorage on mount
